@@ -10,4 +10,35 @@
 
 	<groupId>net.zhaoxiaobin</groupId>
 	<artifactId>dubbo-consumer</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.zhaoxiaobin</groupId>
+			<artifactId>dubbo-interface</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- 引入dubbo的依赖，2.7.8之后引入org.apache.dubbo -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>2.7.8</version>
+		</dependency>
+		<!-- 引入zookeeper的依赖，内部包含zookeeper3.4.6与zk版本一致 -->
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>2.11.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+	</dependencies>
 </project>

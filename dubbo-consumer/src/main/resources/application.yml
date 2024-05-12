@@ -1,2 +1,9 @@
 server:
   port: 12002
+
+dubbo:
+  application:
+    id: dubbo-consumer
+    name: dubbo-consumer
+  registry:
+    address: zookeeper://111.229.66.196:2181
